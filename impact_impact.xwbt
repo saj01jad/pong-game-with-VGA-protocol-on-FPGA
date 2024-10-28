@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\impact.xsl
+OUTFILE=C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol
+LICENSE=iMPACT
+USER_INFO=iMPACT

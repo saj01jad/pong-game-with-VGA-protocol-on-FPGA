@@ -1,0 +1,8 @@
+verilog work "v_counter.v"
+verilog work "h_counter.v"
+verilog work "clock_divider.v"
+verilog work "syncroner.v"
+verilog work "color_controller.v"
+verilog work "top.v"
+verilog work "top_tb.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

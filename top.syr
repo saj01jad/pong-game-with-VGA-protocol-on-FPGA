@@ -1,0 +1,957 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-ftg256
+
+---- Source Options
+Top Module Name                    : top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\v_counter.v" into library work
+Parsing module <v_counter>.
+Analyzing Verilog file "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\raket_axi.v" into library work
+Parsing module <raket_axi>.
+Analyzing Verilog file "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\h_counter.v" into library work
+Parsing module <h_counter>.
+Analyzing Verilog file "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\clock_divider.v" into library work
+Parsing module <Clock_divider>.
+Analyzing Verilog file "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\clk_bazz.v" into library work
+Parsing module <clk_bazz>.
+Analyzing Verilog file "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_clk.v" into library work
+Parsing module <bal_clk>.
+Analyzing Verilog file "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" into library work
+Parsing module <bal_axi>.
+Analyzing Verilog file "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\syncroner.v" into library work
+Parsing module <syncroner>.
+Analyzing Verilog file "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\LtoP.v" into library work
+Parsing module <LtoP>.
+Analyzing Verilog file "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\debunce.v" into library work
+Parsing module <debunce>.
+WARNING:HDLCompiler:568 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\debunce.v" Line 27: Constant value is truncated to fit in <6> bits.
+Analyzing Verilog file "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\color.v" into library work
+Parsing module <color>.
+Analyzing Verilog file "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bazz.v" into library work
+Parsing module <bazz>.
+Analyzing Verilog file "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\top.v" into library work
+Parsing module <top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top>.
+
+Elaborating module <debunce>.
+WARNING:HDLCompiler:91 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\debunce.v" Line 37: Signal <state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+Elaborating module <LtoP>.
+
+Elaborating module <bazz>.
+
+Elaborating module <clk_bazz>.
+
+Elaborating module <color>.
+WARNING:HDLCompiler:872 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\color.v" Line 39: Using initial value of h_raket_1 since it is never assigned
+
+Elaborating module <bal_clk>.
+
+Elaborating module <bal_axi>.
+WARNING:HDLCompiler:872 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 31: Using initial value of botton_r1 since it is never assigned
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 39: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 40: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 48: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 57: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 58: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 59: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 60: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 71: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 79: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 80: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 81: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 82: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 93: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 101: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 102: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 110: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 123: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 124: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 132: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 140: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 141: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 142: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 143: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 154: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 162: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 163: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 164: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 165: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 176: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 184: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 185: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v" Line 193: Result of 3-bit expression is truncated to fit in 2-bit target.
+
+Elaborating module <raket_axi>.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\raket_axi.v" Line 34: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\raket_axi.v" Line 35: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\raket_axi.v" Line 40: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\raket_axi.v" Line 41: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\raket_axi.v" Line 32: Assignment to direct ignored, since the identifier is never used
+WARNING:HDLCompiler:91 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\color.v" Line 42: Signal <left_b_w> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\color.v" Line 47: Signal <s_raket_1> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\color.v" Line 52: Signal <s_raket_2> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+Elaborating module <syncroner>.
+
+Elaborating module <Clock_divider>.
+
+Elaborating module <h_counter>.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\h_counter.v" Line 29: Result of 17-bit expression is truncated to fit in 16-bit target.
+
+Elaborating module <v_counter>.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\v_counter.v" Line 30: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\syncroner.v" Line 35: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\syncroner.v" Line 36: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\syncroner.v" Line 37: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\top.v" Line 44: Assignment to video_on ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top>.
+    Related source file is "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\top.v".
+INFO:Xst:3210 - "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\top.v" line 44: Output port <video_on> of the instance <sync_inst> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <top> synthesized.
+
+Synthesizing Unit <debunce>.
+    Related source file is "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\debunce.v".
+        delay = 24'b000000000000000000000000
+        zero = 2'b00
+        zto = 2'b01
+        one = 2'b10
+        otz = 2'b11
+    Found 5-bit register for signal <cnt>.
+    Found 2-bit register for signal <state>.
+    Found 1-bit 4-to-1 multiplexer for signal <state[1]_keyin_Mux_20_o> created at line 37.
+    Found 1-bit 4-to-1 multiplexer for signal <state[1]_next_state[1]_Mux_21_o> created at line 37.
+WARNING:Xst:737 - Found 1-bit latch for signal <next_state<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <next_state<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+	inferred   2 Latch(s).
+	inferred   3 Multiplexer(s).
+Unit <debunce> synthesized.
+
+Synthesizing Unit <LtoP>.
+    Related source file is "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\LtoP.v".
+    Found 1-bit register for signal <current_state>.
+    Found 1-bit register for signal <dout>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <LtoP> synthesized.
+
+Synthesizing Unit <bazz>.
+    Related source file is "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bazz.v".
+    Found 1-bit register for signal <out>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <bazz> synthesized.
+
+Synthesizing Unit <clk_bazz>.
+    Related source file is "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\clk_bazz.v".
+        DIVISOR = 28'b0000000011110100001001000000
+    Found 1-bit register for signal <clock_out>.
+    Found 28-bit register for signal <counter>.
+    Found 28-bit adder for signal <counter[27]_GND_7_o_add_1_OUT> created at line 34.
+    Found 28-bit comparator greater for signal <n0001> created at line 35
+    Found 28-bit comparator greater for signal <counter[27]_GND_7_o_LessThan_5_o> created at line 38
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  29 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <clk_bazz> synthesized.
+
+Synthesizing Unit <color>.
+    Related source file is "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\color.v".
+    Found 16-bit comparator greater for signal <left_b_w[15]_h_counter[15]_LessThan_1_o> created at line 42
+    Found 16-bit comparator lessequal for signal <n0001> created at line 42
+    Found 16-bit comparator greater for signal <top_b_w[15]_v_counter[15]_LessThan_3_o> created at line 42
+    Found 16-bit comparator greater for signal <v_counter[15]_botton_b_w[15]_LessThan_4_o> created at line 42
+    Found 16-bit comparator greater for signal <s_raket_1[15]_h_counter[15]_LessThan_5_o> created at line 47
+    Found 16-bit comparator lessequal for signal <n0009> created at line 47
+    Found 16-bit comparator greater for signal <v_counter[15]_GND_8_o_LessThan_7_o> created at line 47
+    Found 16-bit comparator greater for signal <GND_8_o_v_counter[15]_LessThan_8_o> created at line 47
+    Found 16-bit comparator greater for signal <s_raket_2[15]_h_counter[15]_LessThan_9_o> created at line 52
+    Found 16-bit comparator lessequal for signal <n0017> created at line 52
+    Found 16-bit comparator greater for signal <v_counter[15]_GND_8_o_LessThan_11_o> created at line 52
+    Found 16-bit comparator greater for signal <GND_8_o_v_counter[15]_LessThan_12_o> created at line 52
+    Summary:
+	inferred  12 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <color> synthesized.
+
+Synthesizing Unit <bal_clk>.
+    Related source file is "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_clk.v".
+        DIVISOR = 28'b0000000011000011010100000000
+    Found 1-bit register for signal <clock_out>.
+    Found 28-bit register for signal <counter>.
+    Found 28-bit adder for signal <counter[27]_GND_9_o_add_1_OUT> created at line 34.
+    Found 28-bit comparator greater for signal <n0001> created at line 35
+    Found 28-bit comparator greater for signal <counter[27]_GND_9_o_LessThan_5_o> created at line 38
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  29 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <bal_clk> synthesized.
+
+Synthesizing Unit <bal_axi>.
+    Related source file is "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\bal_axi.v".
+    Found 16-bit register for signal <top_b>.
+    Found 16-bit register for signal <botton_b>.
+    Found 1-bit register for signal <direct>.
+    Found 2-bit register for signal <bordar>.
+    Found 16-bit register for signal <left_b>.
+    Found 16-bit register for signal <right_b>.
+    Found 1-bit register for signal <fell>.
+    Found 16-bit adder for signal <top_b[15]_GND_10_o_add_48_OUT> created at line 101.
+    Found 16-bit adder for signal <botton_b[15]_GND_10_o_add_49_OUT> created at line 102.
+    Found 16-bit adder for signal <left_b[15]_GND_10_o_add_100_OUT> created at line 164.
+    Found 16-bit adder for signal <right_b[15]_GND_10_o_add_101_OUT> created at line 165.
+    Found 2-bit adder for signal <bordar[1]_GND_10_o_add_121_OUT> created at line 193.
+    Found 16-bit subtractor for signal <GND_10_o_GND_10_o_sub_84_OUT<15:0>> created at line 142.
+    Found 16-bit subtractor for signal <GND_10_o_GND_10_o_sub_85_OUT<15:0>> created at line 143.
+    Found 16-bit subtractor for signal <GND_10_o_GND_10_o_sub_116_OUT<15:0>> created at line 184.
+    Found 16-bit subtractor for signal <GND_10_o_GND_10_o_sub_117_OUT<15:0>> created at line 185.
+    Found 2-bit 4-to-1 multiplexer for signal <bordar[1]_bordar[1]_wide_mux_65_OUT> created at line 37.
+    Found 2-bit 4-to-1 multiplexer for signal <bordar[1]_bordar[1]_wide_mux_132_OUT> created at line 121.
+    Found 16-bit comparator greater for signal <GND_10_o_botton_b[15]_LessThan_51_o> created at line 103
+    Found 16-bit comparator lessequal for signal <n0014> created at line 108
+    Found 16-bit comparator lessequal for signal <n0016> created at line 108
+    Found 16-bit comparator lessequal for signal <n0019> created at line 112
+    Found 16-bit comparator lessequal for signal <n0021> created at line 112
+    Found 16-bit comparator greater for signal <top_b[15]_GND_10_o_LessThan_118_o> created at line 186
+    Found 16-bit comparator lessequal for signal <n0059> created at line 191
+    Found 16-bit comparator lessequal for signal <n0061> created at line 191
+    Found 16-bit comparator lessequal for signal <n0065> created at line 195
+    Found 16-bit comparator lessequal for signal <n0067> created at line 195
+    Summary:
+	inferred   7 Adder/Subtractor(s).
+	inferred  68 D-type flip-flop(s).
+	inferred  10 Comparator(s).
+	inferred  38 Multiplexer(s).
+Unit <bal_axi> synthesized.
+
+Synthesizing Unit <raket_axi>.
+    Related source file is "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\raket_axi.v".
+    Found 16-bit register for signal <right_b>.
+    Found 16-bit register for signal <left_b>.
+    Found 16-bit adder for signal <left_b[15]_GND_11_o_add_1_OUT> created at line 34.
+    Found 16-bit adder for signal <right_b[15]_GND_11_o_add_2_OUT> created at line 35.
+    Found 16-bit subtractor for signal <GND_11_o_GND_11_o_sub_5_OUT<15:0>> created at line 40.
+    Found 16-bit subtractor for signal <GND_11_o_GND_11_o_sub_6_OUT<15:0>> created at line 41.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+Unit <raket_axi> synthesized.
+
+Synthesizing Unit <syncroner>.
+    Related source file is "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\syncroner.v".
+    Found 16-bit comparator greater for signal <h_counter_val[15]_GND_12_o_LessThan_1_o> created at line 35
+    Found 16-bit comparator greater for signal <v_counter_val[15]_GND_12_o_LessThan_3_o> created at line 36
+    Found 16-bit comparator lessequal for signal <n0004> created at line 37
+    Found 16-bit comparator greater for signal <GND_12_o_h_counter_val[15]_LessThan_6_o> created at line 37
+    Found 16-bit comparator lessequal for signal <n0008> created at line 37
+    Found 16-bit comparator greater for signal <GND_12_o_v_counter_val[15]_LessThan_8_o> created at line 37
+    Summary:
+	inferred   6 Comparator(s).
+Unit <syncroner> synthesized.
+
+Synthesizing Unit <Clock_divider>.
+    Related source file is "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\clock_divider.v".
+        DIVISOR = 28'b0000000000000000000000000010
+    Found 1-bit register for signal <clock_out>.
+    Found 28-bit register for signal <counter>.
+    Found 28-bit adder for signal <counter[27]_GND_13_o_add_1_OUT> created at line 34.
+    Found 28-bit comparator greater for signal <n0001> created at line 35
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  29 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <Clock_divider> synthesized.
+
+Synthesizing Unit <h_counter>.
+    Related source file is "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\h_counter.v".
+    Found 1-bit register for signal <v_counter_e>.
+    Found 16-bit register for signal <h_counter_val>.
+    Found 16-bit adder for signal <h_counter_val[15]_GND_14_o_add_2_OUT> created at line 29.
+    Found 16-bit comparator greater for signal <h_counter_val[15]_GND_14_o_LessThan_2_o> created at line 28
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <h_counter> synthesized.
+
+Synthesizing Unit <v_counter>.
+    Related source file is "C:\Users\Lenovo\OneDrive\Documents\uni\FPGA\VGA_protocol\v_counter.v".
+    Found 16-bit register for signal <v_counter_val>.
+    Found 16-bit adder for signal <v_counter_val[15]_GND_15_o_add_2_OUT> created at line 30.
+    Found 16-bit comparator lessequal for signal <v_counter_val[15]_GND_15_o_LessThan_2_o> created at line 29
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <v_counter> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 16
+ 16-bit adder                                          : 4
+ 16-bit addsub                                         : 6
+ 16-bit subtractor                                     : 2
+ 2-bit adder                                           : 1
+ 28-bit adder                                          : 3
+# Registers                                            : 33
+ 1-bit register                                        : 15
+ 16-bit register                                       : 10
+ 2-bit register                                        : 5
+ 28-bit register                                       : 3
+# Latches                                              : 8
+ 1-bit latch                                           : 8
+# Comparators                                          : 35
+ 16-bit comparator greater                             : 16
+ 16-bit comparator lessequal                           : 14
+ 28-bit comparator greater                             : 5
+# Multiplexers                                         : 53
+ 1-bit 2-to-1 multiplexer                              : 5
+ 1-bit 4-to-1 multiplexer                              : 8
+ 16-bit 2-to-1 multiplexer                             : 6
+ 2-bit 2-to-1 multiplexer                              : 29
+ 2-bit 4-to-1 multiplexer                              : 2
+ 4-bit 2-to-1 multiplexer                              : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Clock_divider>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <Clock_divider> synthesized (advanced).
+
+Synthesizing (advanced) Unit <bal_axi>.
+The following registers are absorbed into counter <top_b>: 1 register on signal <top_b>.
+The following registers are absorbed into counter <botton_b>: 1 register on signal <botton_b>.
+Unit <bal_axi> synthesized (advanced).
+
+Synthesizing (advanced) Unit <bal_clk>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <bal_clk> synthesized (advanced).
+
+Synthesizing (advanced) Unit <clk_bazz>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <clk_bazz> synthesized (advanced).
+
+Synthesizing (advanced) Unit <h_counter>.
+The following registers are absorbed into counter <h_counter_val>: 1 register on signal <h_counter_val>.
+Unit <h_counter> synthesized (advanced).
+
+Synthesizing (advanced) Unit <raket_axi>.
+The following registers are absorbed into accumulator <left_b>: 1 register on signal <left_b>.
+The following registers are absorbed into accumulator <right_b>: 1 register on signal <right_b>.
+Unit <raket_axi> synthesized (advanced).
+
+Synthesizing (advanced) Unit <v_counter>.
+The following registers are absorbed into counter <v_counter_val>: 1 register on signal <v_counter_val>.
+Unit <v_counter> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 16-bit adder                                          : 2
+ 16-bit subtractor                                     : 2
+ 2-bit adder                                           : 1
+# Counters                                             : 7
+ 16-bit up counter                                     : 2
+ 16-bit updown counter                                 : 2
+ 28-bit up counter                                     : 3
+# Accumulators                                         : 4
+ 16-bit updown accumulator                             : 4
+# Registers                                            : 57
+ Flip-Flops                                            : 57
+# Comparators                                          : 35
+ 16-bit comparator greater                             : 16
+ 16-bit comparator lessequal                           : 14
+ 28-bit comparator greater                             : 5
+# Multiplexers                                         : 53
+ 1-bit 2-to-1 multiplexer                              : 5
+ 1-bit 4-to-1 multiplexer                              : 8
+ 16-bit 2-to-1 multiplexer                             : 6
+ 2-bit 2-to-1 multiplexer                              : 29
+ 2-bit 4-to-1 multiplexer                              : 2
+ 4-bit 2-to-1 multiplexer                              : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1294 - Latch <next_state_0> is equivalent to a wire in block <debunce>.
+WARNING:Xst:1294 - Latch <next_state_1> is equivalent to a wire in block <debunce>.
+
+Optimizing unit <top> ...
+
+Optimizing unit <color> ...
+
+Optimizing unit <bal_axi> ...
+
+Optimizing unit <syncroner> ...
+WARNING:Xst:1293 - FF/Latch <sync_inst/clock_divider_inst/counter_23> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_22> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_21> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_20> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_19> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_18> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_17> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_16> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_15> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_14> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_13> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_12> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_9> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_8> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_7> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_6> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_5> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_4> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_3> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_2> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_1> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bazz_inst/clk_bazz_inst/counter_20> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bazz_inst/clk_bazz_inst/counter_21> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bazz_inst/clk_bazz_inst/counter_22> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bazz_inst/clk_bazz_inst/counter_23> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bazz_inst/clk_bazz_inst/counter_24> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bazz_inst/clk_bazz_inst/counter_25> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bazz_inst/clk_bazz_inst/counter_26> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <bazz_inst/clk_bazz_inst/counter_27> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <color_inst/bal_clk_inst/counter_27> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <color_inst/bal_clk_inst/counter_26> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <color_inst/bal_clk_inst/counter_25> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <color_inst/bal_clk_inst/counter_24> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <color_inst/bal_clk_inst/counter_23> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <color_inst/bal_clk_inst/counter_22> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <color_inst/bal_clk_inst/counter_21> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <color_inst/bal_clk_inst/counter_20> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <color_inst/raket_axi_inst1/left_b_0> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <color_inst/raket_axi_inst1/right_b_0> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <color_inst/raket_axi_inst2/right_b_0> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <color_inst/raket_axi_inst2/left_b_0> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_27> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_26> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_25> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <sync_inst/clock_divider_inst/counter_24> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <color_inst/raket_axi_inst2/right_b_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <color_inst/raket_axi_inst2/left_b_1> 
+INFO:Xst:2261 - The FF/Latch <bazz_inst/clk_bazz_inst/counter_0> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <color_inst/bal_clk_inst/counter_0> <sync_inst/clock_divider_inst/counter_0> <sync_inst/clock_divider_inst/clock_out> 
+INFO:Xst:2261 - The FF/Latch <bazz_inst/clk_bazz_inst/counter_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <color_inst/bal_clk_inst/counter_1> 
+INFO:Xst:2261 - The FF/Latch <bazz_inst/clk_bazz_inst/counter_2> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <color_inst/bal_clk_inst/counter_2> 
+INFO:Xst:2261 - The FF/Latch <bazz_inst/clk_bazz_inst/counter_3> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <color_inst/bal_clk_inst/counter_3> 
+INFO:Xst:2261 - The FF/Latch <bazz_inst/clk_bazz_inst/counter_4> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <color_inst/bal_clk_inst/counter_4> 
+INFO:Xst:2261 - The FF/Latch <bazz_inst/clk_bazz_inst/counter_5> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <color_inst/bal_clk_inst/counter_5> 
+INFO:Xst:2261 - The FF/Latch <color_inst/raket_axi_inst1/left_b_1> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <color_inst/raket_axi_inst1/right_b_1> 
+INFO:Xst:3203 - The FF/Latch <color_inst/raket_axi_inst2/right_b_2> in Unit <top> is the opposite to the following FF/Latch, which will be removed : <color_inst/raket_axi_inst2/left_b_2> 
+INFO:Xst:3203 - The FF/Latch <color_inst/raket_axi_inst1/left_b_2> in Unit <top> is the opposite to the following FF/Latch, which will be removed : <color_inst/raket_axi_inst1/right_b_2> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 13.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 210
+ Flip-Flops                                            : 210
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1192
+#      GND                         : 1
+#      INV                         : 45
+#      LUT1                        : 100
+#      LUT2                        : 100
+#      LUT3                        : 13
+#      LUT4                        : 284
+#      LUT5                        : 33
+#      LUT6                        : 35
+#      MUXCY                       : 360
+#      MUXF7                       : 2
+#      VCC                         : 1
+#      XORCY                       : 218
+# FlipFlops/Latches                : 210
+#      FD                          : 50
+#      FDE                         : 88
+#      FDR                         : 56
+#      FDRE                        : 16
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 19
+#      IBUF                        : 4
+#      OBUF                        : 15
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9ftg256-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             209  out of  11440     1%  
+ Number of Slice LUTs:                  610  out of   5720    10%  
+    Number used as Logic:               610  out of   5720    10%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    614
+   Number with an unused Flip Flop:     405  out of    614    65%  
+   Number with an unused LUT:             4  out of    614     0%  
+   Number of fully used LUT-FF pairs:   205  out of    614    33%  
+   Number of unique control sets:        16
+
+IO Utilization: 
+ Number of IOs:                          20
+ Number of bonded IOBs:                  20  out of    186    10%  
+    IOB Flip Flops/Latches:               1
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 108   |
+bazz_inst/clk_bazz_inst/clock_out  | NONE(bazz_inst/out)    | 1     |
+color_inst/bal_clk_inst/clock_out  | BUFG                   | 68    |
+bazz_inst/clk_bazz_inst/counter_0  | BUFG                   | 33    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.664ns (Maximum Frequency: 176.541MHz)
+   Minimum input arrival time before clock: 2.146ns
+   Maximum output required time after clock: 8.479ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.718ns (frequency: 268.944MHz)
+  Total number of paths / destination ports: 3178 / 202
+-------------------------------------------------------------------------
+Delay:               3.718ns (Levels of Logic = 6)
+  Source:            bazz_inst/clk_bazz_inst/counter_6 (FF)
+  Destination:       bazz_inst/clk_bazz_inst/counter_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: bazz_inst/clk_bazz_inst/counter_6 to bazz_inst/clk_bazz_inst/counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              5   0.447   1.059  bazz_inst/clk_bazz_inst/counter_6 (bazz_inst/clk_bazz_inst/counter_6)
+     LUT5:I0->O            1   0.203   0.000  bazz_inst/clk_bazz_inst/Mcompar_n0001_lut<1> (bazz_inst/clk_bazz_inst/Mcompar_n0001_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  bazz_inst/clk_bazz_inst/Mcompar_n0001_cy<1> (bazz_inst/clk_bazz_inst/Mcompar_n0001_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  bazz_inst/clk_bazz_inst/Mcompar_n0001_cy<2> (bazz_inst/clk_bazz_inst/Mcompar_n0001_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  bazz_inst/clk_bazz_inst/Mcompar_n0001_cy<3> (bazz_inst/clk_bazz_inst/Mcompar_n0001_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  bazz_inst/clk_bazz_inst/Mcompar_n0001_cy<4> (bazz_inst/clk_bazz_inst/Mcompar_n0001_cy<4>)
+     MUXCY:CI->O          20   0.258   1.092  bazz_inst/clk_bazz_inst/Mcompar_n0001_cy<5> (bazz_inst/clk_bazz_inst/Mcompar_n0001_cy<5>)
+     FDR:R                     0.430          bazz_inst/clk_bazz_inst/counter_0
+    ----------------------------------------
+    Total                      3.718ns (1.567ns logic, 2.151ns route)
+                                       (42.1% logic, 57.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'color_inst/bal_clk_inst/clock_out'
+  Clock period: 5.664ns (frequency: 176.541MHz)
+  Total number of paths / destination ports: 2931 / 101
+-------------------------------------------------------------------------
+Delay:               5.664ns (Levels of Logic = 5)
+  Source:            color_inst/bal_axi_inst/left_b_5 (FF)
+  Destination:       color_inst/bal_axi_inst/bordar_1 (FF)
+  Source Clock:      color_inst/bal_clk_inst/clock_out rising
+  Destination Clock: color_inst/bal_clk_inst/clock_out rising
+
+  Data Path: color_inst/bal_axi_inst/left_b_5 to color_inst/bal_axi_inst/bordar_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             14   0.447   1.302  color_inst/bal_axi_inst/left_b_5 (color_inst/bal_axi_inst/left_b_5)
+     LUT6:I1->O            1   0.203   0.684  color_inst/bal_axi_inst/GND_10_o_GND_10_o_equal_103_o<15>1 (color_inst/bal_axi_inst/GND_10_o_GND_10_o_equal_103_o<15>)
+     LUT6:I4->O            6   0.203   0.849  color_inst/bal_axi_inst/GND_10_o_GND_10_o_equal_103_o<15>3 (color_inst/bal_axi_inst/GND_10_o_GND_10_o_equal_103_o)
+     LUT4:I2->O            1   0.203   0.684  color_inst/bal_axi_inst/Mmux_bordar[1]_bordar[1]_mux_137_OUT103 (color_inst/bal_axi_inst/Mmux_bordar[1]_bordar[1]_mux_137_OUT102)
+     LUT6:I4->O            1   0.203   0.580  color_inst/bal_axi_inst/Mmux_bordar[1]_bordar[1]_mux_137_OUT106 (color_inst/bal_axi_inst/Mmux_bordar[1]_bordar[1]_mux_137_OUT105)
+     LUT6:I5->O            1   0.205   0.000  color_inst/bal_axi_inst/Mmux_bordar[1]_bordar[1]_mux_137_OUT107 (color_inst/bal_axi_inst/bordar[1]_bordar[1]_mux_137_OUT<1>)
+     FD:D                      0.102          color_inst/bal_axi_inst/bordar_1
+    ----------------------------------------
+    Total                      5.664ns (1.566ns logic, 4.098ns route)
+                                       (27.6% logic, 72.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'bazz_inst/clk_bazz_inst/counter_0'
+  Clock period: 4.483ns (frequency: 223.087MHz)
+  Total number of paths / destination ports: 800 / 81
+-------------------------------------------------------------------------
+Delay:               4.483ns (Levels of Logic = 2)
+  Source:            sync_inst/vga_h_counter/h_counter_val_6 (FF)
+  Destination:       sync_inst/vga_h_counter/h_counter_val_15 (FF)
+  Source Clock:      bazz_inst/clk_bazz_inst/counter_0 rising
+  Destination Clock: bazz_inst/clk_bazz_inst/counter_0 rising
+
+  Data Path: sync_inst/vga_h_counter/h_counter_val_6 to sync_inst/vga_h_counter/h_counter_val_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             15   0.447   1.346  sync_inst/vga_h_counter/h_counter_val_6 (sync_inst/vga_h_counter/h_counter_val_6)
+     LUT6:I0->O            1   0.203   0.827  sync_inst/vga_h_counter/h_counter_val[15]_GND_14_o_LessThan_2_o_inv_SW0 (N17)
+     LUT6:I2->O           17   0.203   1.027  sync_inst/vga_h_counter/h_counter_val[15]_GND_14_o_LessThan_2_o_inv (sync_inst/vga_h_counter/h_counter_val[15]_GND_14_o_LessThan_2_o_inv)
+     FDR:R                     0.430          sync_inst/vga_h_counter/h_counter_val_0
+    ----------------------------------------
+    Total                      4.483ns (1.283ns logic, 3.200ns route)
+                                       (28.6% logic, 71.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              2.146ns (Levels of Logic = 2)
+  Source:            key4 (PAD)
+  Destination:       deb_inst4/state_1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: key4 to deb_inst4/state_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.617  key4_IBUF (key4_IBUF)
+     LUT3:I2->O            1   0.205   0.000  deb_inst4/state[1]_next_state[1]_Mux_19_o1 (deb_inst4/next_state<1>)
+     FD:D                      0.102          deb_inst4/state_1
+    ----------------------------------------
+    Total                      2.146ns (1.529ns logic, 0.617ns route)
+                                       (71.2% logic, 28.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'bazz_inst/clk_bazz_inst/counter_0'
+  Total number of paths / destination ports: 2079 / 14
+-------------------------------------------------------------------------
+Offset:              8.479ns (Levels of Logic = 12)
+  Source:            sync_inst/vga_h_counter/h_counter_val_0 (FF)
+  Destination:       red<3> (PAD)
+  Source Clock:      bazz_inst/clk_bazz_inst/counter_0 rising
+
+  Data Path: sync_inst/vga_h_counter/h_counter_val_0 to red<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             15   0.447   1.229  sync_inst/vga_h_counter/h_counter_val_0 (sync_inst/vga_h_counter/h_counter_val_0)
+     LUT4:I0->O            1   0.203   0.000  color_inst/Mcompar_h_counter[15]_right_b_w[15]_LessThan_2_o_lut<0> (color_inst/Mcompar_h_counter[15]_right_b_w[15]_LessThan_2_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  color_inst/Mcompar_h_counter[15]_right_b_w[15]_LessThan_2_o_cy<0> (color_inst/Mcompar_h_counter[15]_right_b_w[15]_LessThan_2_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  color_inst/Mcompar_h_counter[15]_right_b_w[15]_LessThan_2_o_cy<1> (color_inst/Mcompar_h_counter[15]_right_b_w[15]_LessThan_2_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  color_inst/Mcompar_h_counter[15]_right_b_w[15]_LessThan_2_o_cy<2> (color_inst/Mcompar_h_counter[15]_right_b_w[15]_LessThan_2_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  color_inst/Mcompar_h_counter[15]_right_b_w[15]_LessThan_2_o_cy<3> (color_inst/Mcompar_h_counter[15]_right_b_w[15]_LessThan_2_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  color_inst/Mcompar_h_counter[15]_right_b_w[15]_LessThan_2_o_cy<4> (color_inst/Mcompar_h_counter[15]_right_b_w[15]_LessThan_2_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  color_inst/Mcompar_h_counter[15]_right_b_w[15]_LessThan_2_o_cy<5> (color_inst/Mcompar_h_counter[15]_right_b_w[15]_LessThan_2_o_cy<5>)
+     MUXCY:CI->O           1   0.213   0.684  color_inst/Mcompar_h_counter[15]_right_b_w[15]_LessThan_2_o_cy<6> (color_inst/Mcompar_h_counter[15]_right_b_w[15]_LessThan_2_o_cy<6>)
+     LUT5:I3->O            1   0.203   0.827  color_inst/Mcompar_h_counter[15]_right_b_w[15]_LessThan_2_o_cy<7> (color_inst/h_counter[15]_right_b_w[15]_LessThan_2_o)
+     LUT4:I0->O            6   0.203   0.745  color_inst/left_b_w[15]_v_counter[15]_AND_22_o1 (blue_0_OBUF)
+     LUT6:I5->O            4   0.205   0.683  color_inst/green<1> (green_0_OBUF)
+     OBUF:I->O                 2.571          green_3_OBUF (green<3>)
+    ----------------------------------------
+    Total                      8.479ns (4.312ns logic, 4.167ns route)
+                                       (50.9% logic, 49.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 448 / 8
+-------------------------------------------------------------------------
+Offset:              8.408ns (Levels of Logic = 11)
+  Source:            color_inst/raket_axi_inst1/left_b_2 (FF)
+  Destination:       red<3> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: color_inst/raket_axi_inst1/left_b_2 to red<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              9   0.447   0.829  color_inst/raket_axi_inst1/left_b_2 (color_inst/raket_axi_inst1/left_b_2)
+     INV:I->O              6   0.206   0.973  color_inst/s_raket_1<2>_inv1_INV_0 (color_inst/e_raket_1<2>)
+     LUT4:I1->O            1   0.205   0.000  color_inst/Mcompar_h_counter[15]_e_raket_1[15]_LessThan_6_o_lut<1> (color_inst/Mcompar_h_counter[15]_e_raket_1[15]_LessThan_6_o_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  color_inst/Mcompar_h_counter[15]_e_raket_1[15]_LessThan_6_o_cy<1> (color_inst/Mcompar_h_counter[15]_e_raket_1[15]_LessThan_6_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  color_inst/Mcompar_h_counter[15]_e_raket_1[15]_LessThan_6_o_cy<2> (color_inst/Mcompar_h_counter[15]_e_raket_1[15]_LessThan_6_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  color_inst/Mcompar_h_counter[15]_e_raket_1[15]_LessThan_6_o_cy<3> (color_inst/Mcompar_h_counter[15]_e_raket_1[15]_LessThan_6_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  color_inst/Mcompar_h_counter[15]_e_raket_1[15]_LessThan_6_o_cy<4> (color_inst/Mcompar_h_counter[15]_e_raket_1[15]_LessThan_6_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  color_inst/Mcompar_h_counter[15]_e_raket_1[15]_LessThan_6_o_cy<5> (color_inst/Mcompar_h_counter[15]_e_raket_1[15]_LessThan_6_o_cy<5>)
+     MUXCY:CI->O           1   0.213   0.684  color_inst/Mcompar_h_counter[15]_e_raket_1[15]_LessThan_6_o_cy<6> (color_inst/Mcompar_h_counter[15]_e_raket_1[15]_LessThan_6_o_cy<6>)
+     LUT5:I3->O            1   0.203   0.944  color_inst/Mcompar_h_counter[15]_e_raket_1[15]_LessThan_6_o_cy<7> (color_inst/h_counter[15]_e_raket_1[15]_LessThan_6_o)
+     LUT6:I0->O            4   0.203   0.683  color_inst/red<1> (red_0_OBUF)
+     OBUF:I->O                 2.571          red_3_OBUF (red<3>)
+    ----------------------------------------
+    Total                      8.408ns (4.296ns logic, 4.112ns route)
+                                       (51.1% logic, 48.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'color_inst/bal_clk_inst/clock_out'
+  Total number of paths / destination ports: 1440 / 12
+-------------------------------------------------------------------------
+Offset:              8.421ns (Levels of Logic = 12)
+  Source:            color_inst/bal_axi_inst/left_b_0 (FF)
+  Destination:       red<3> (PAD)
+  Source Clock:      color_inst/bal_clk_inst/clock_out rising
+
+  Data Path: color_inst/bal_axi_inst/left_b_0 to red<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             14   0.447   1.186  color_inst/bal_axi_inst/left_b_0 (color_inst/bal_axi_inst/left_b_0)
+     LUT4:I1->O            1   0.205   0.000  color_inst/Mcompar_left_b_w[15]_h_counter[15]_LessThan_1_o_lut<0> (color_inst/Mcompar_left_b_w[15]_h_counter[15]_LessThan_1_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  color_inst/Mcompar_left_b_w[15]_h_counter[15]_LessThan_1_o_cy<0> (color_inst/Mcompar_left_b_w[15]_h_counter[15]_LessThan_1_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  color_inst/Mcompar_left_b_w[15]_h_counter[15]_LessThan_1_o_cy<1> (color_inst/Mcompar_left_b_w[15]_h_counter[15]_LessThan_1_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  color_inst/Mcompar_left_b_w[15]_h_counter[15]_LessThan_1_o_cy<2> (color_inst/Mcompar_left_b_w[15]_h_counter[15]_LessThan_1_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  color_inst/Mcompar_left_b_w[15]_h_counter[15]_LessThan_1_o_cy<3> (color_inst/Mcompar_left_b_w[15]_h_counter[15]_LessThan_1_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  color_inst/Mcompar_left_b_w[15]_h_counter[15]_LessThan_1_o_cy<4> (color_inst/Mcompar_left_b_w[15]_h_counter[15]_LessThan_1_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  color_inst/Mcompar_left_b_w[15]_h_counter[15]_LessThan_1_o_cy<5> (color_inst/Mcompar_left_b_w[15]_h_counter[15]_LessThan_1_o_cy<5>)
+     MUXCY:CI->O           1   0.213   0.684  color_inst/Mcompar_left_b_w[15]_h_counter[15]_LessThan_1_o_cy<6> (color_inst/Mcompar_left_b_w[15]_h_counter[15]_LessThan_1_o_cy<6>)
+     LUT5:I3->O            1   0.203   0.808  color_inst/Mcompar_left_b_w[15]_h_counter[15]_LessThan_1_o_cy<7> (color_inst/Mcompar_left_b_w[15]_h_counter[15]_LessThan_1_o_cy<7>)
+     LUT4:I1->O            6   0.205   0.745  color_inst/left_b_w[15]_v_counter[15]_AND_22_o1 (blue_0_OBUF)
+     LUT6:I5->O            4   0.205   0.683  color_inst/green<1> (green_0_OBUF)
+     OBUF:I->O                 2.571          green_3_OBUF (green<3>)
+    ----------------------------------------
+    Total                      8.421ns (4.316ns logic, 4.105ns route)
+                                       (51.3% logic, 48.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'bazz_inst/clk_bazz_inst/clock_out'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            bazz_inst/out (FF)
+  Destination:       out (PAD)
+  Source Clock:      bazz_inst/clk_bazz_inst/clock_out rising
+
+  Data Path: bazz_inst/out to out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.447   0.579  bazz_inst/out (bazz_inst/out)
+     OBUF:I->O                 2.571          out_OBUF (out)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock bazz_inst/clk_bazz_inst/clock_out
+---------------------------------+---------+---------+---------+---------+
+                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------+---------+---------+---------+---------+
+color_inst/bal_clk_inst/clock_out|    1.456|         |         |         |
+---------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock bazz_inst/clk_bazz_inst/counter_0
+---------------------------------+---------+---------+---------+---------+
+                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------+---------+---------+---------+---------+
+bazz_inst/clk_bazz_inst/counter_0|    4.483|         |         |         |
+---------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.718|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock color_inst/bal_clk_inst/clock_out
+---------------------------------+---------+---------+---------+---------+
+                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------+---------+---------+---------+---------+
+clk                              |    6.132|         |         |         |
+color_inst/bal_clk_inst/clock_out|    5.664|         |         |         |
+---------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.22 secs
+ 
+--> 
+
+Total memory usage is 4503580 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  101 (   0 filtered)
+Number of infos    :   12 (   0 filtered)
+
